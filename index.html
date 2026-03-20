@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia CyPA | Aprende a Programar</title>
+    <meta name="description" content="Academia CyPA: Cursos de Python, Desarrollo Web, Programación y Algoritmos para impulsar tu futuro en tecnología.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">
+                <div class="logo-hexagon small">
+                    <span>&lt;CYPA&gt;</span>
+                </div>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#proposito">Propósito</a>
+                <a href="#cursos">Cursos</a>
+                <a href="#contacto" class="btn btn-primary">Contacto</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero / Propósito Section -->
+    <section id="proposito" class="hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <div class="badge fade-in-up">Academia de Tecnología</div>
+                <h1 class="fade-in-up delay-1">Transforma tu futuro escribiendo <span class="highlight">código</span></h1>
+                <p class="fade-in-up delay-2">En <strong class="brand-text">Academia CyPA</strong> nuestro propósito es brindar una educación tecnológica de primer nivel, formando profesionales capaces de enfrentar los desafíos del mañana. Creemos en el aprendizaje práctico, la algoritmia sólida y la pasión por crear.</p>
+                <div class="hero-actions fade-in-up delay-3">
+                    <a href="#cursos" class="btn btn-primary btn-lg">Explorar Cursos <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="hero-visual fade-in delay-2">
+                <div class="code-window">
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="window-title">main.js</span>
+                    </div>
+                    <div class="window-body">
+<pre><code><span class="keyword">function</span> <span class="method">crearFuturo</span>() {
+  <span class="keyword">const</span> <span class="variable">estudiante</span> = <span class="keyword">new</span> <span class="class">Talento</span>();
+
+  <span class="variable">estudiante</span>.<span class="method">aprender</span>([
+    <span class="string">'Python'</span>, 
+    <span class="string">'HTML/CSS/JS'</span>, 
+    <span class="string">'Algoritmos'</span>
+  ]);
+
+  <span class="keyword">return</span> <span class="string">'Éxito Asegurado'</span>;
+}
+
+<span class="method">crearFuturo</span>(); <span class="comment">// Iniciar viaje</span></code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cursos Section -->
+    <section id="cursos" class="seccion-cursos">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Nuestros <span class="highlight">Programas</span></h2>
+                <p>Domina las tecnologías más demandadas del mercado con nuestra selección de cursos intensivos y prácticos ó simplemente prepara esa materia para rendirla con la mejor nota.</p>
+            </div>
+            
+            <div class="cards-grid">
+                <!-- Card 1: Python -->
+                <article class="curso-card fade-in-up delay-1">
+                    <div class="card-icon python-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Curso Python</h3>
+                        <p>Domina uno de los lenguajes más versátiles y demandados. Aprende desde las bases hasta el desarrollo de aplicaciones robustas y scripting.</p>
+                        <a href="curso-python.html" class="card-link">Saber más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="card-glow"></div>
+                </article>
+
+                <!-- Card 2: Web Dev -->
+                <article class="curso-card fade-in-up delay-2">
+                    <div class="card-icon web-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Desarrollo Web Frontend</h3>
+                        <p>Iníciate en el frontend creando sitios web modernos, responsivos e interactivos desde cero con HTML, CSS y JavaScript.</p>
+                        <a href="curso-web.html" class="card-link">Saber más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="card-glow"></div>
+                </article>
+
+                <!-- Card 3: Algoritmos -->
+                <article class="curso-card fade-in-up delay-3">
+                    <div class="card-icon algo-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Programación y Algoritmos</h3>
+                        <p>Construye una base sólida. Desarrolla tu lógica, aprende a resolver problemas complejos y domina las estructuras de datos.</p>
+                        <a href="curso-algoritmos.html" class="card-link">Saber más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="card-glow"></div>
+                </article>
+                <!-- Card 4: Ingresos -->
+                <article class="curso-card fade-in-up delay-3">
+                    <div class="card-icon algo-icon">
+                        <i class="fas fa-pencil"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Ingreso a Facultad y Apoyatura Académica</h3>
+                        <p>Preparate para ingresas a la Universidad o simplemente busca apoyatura académica. Prepara con nosotros tus examenes, trabajos practicos y finales.</p>
+                        <a href="#" class="card-link">Saber más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="card-glow"></div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo-hexagon small">
+                    <span>&lt;CYPA&gt;</span>
+                </div>
+                <p>Formando a la próxima generación de desarrolladores con pasión, código y lógica imbatible.</p>
+            </div>
+            
+            <div class="footer-socials">
+                <h4>Conecta con nosotros</h4>
+                <div class="social-links">
+                    <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Academia CyPA. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

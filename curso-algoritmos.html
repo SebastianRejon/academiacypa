@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Algoritmos | Academia CyPA</title>
+    <meta name="description" content="Curso completo de Python en Academia CyPA. Aprende desde las bases hasta aplicaciones avanzadas.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos específicos para la página de curso */
+        .curso-header {
+            padding: 160px 0 80px;
+            background-color: var(--cypa-blue-light);
+            text-align: center;
+        }
+        
+        .curso-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 24px;
+        }
+
+        .curso-hero-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            margin-bottom: 100px;
+            position: relative;
+            z-index: 10;
+            box-shadow: var(--shadow-lg);
+            background-color: var(--surface-color); /* Fallback si no hay imagen */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Contenedor del placeholder de imagen */
+        .placeholder-image {
+            color: var(--cypa-blue);
+            font-size: 4rem;
+            opacity: 0.5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+        .placeholder-image span {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        .curso-content {
+            padding: 140px 0 80px;
+            background-color: var(--surface-color);
+        }
+
+        .curso-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+        }
+
+        .temario-section h2, .modalidad-section h2 {
+            font-size: 2rem;
+            margin-bottom: 32px;
+            color: var(--cypa-blue);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .temario-list {
+            list-style: none;
+        }
+
+        .temario-item {
+            background-color: var(--bg-color);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            margin-bottom: 16px;
+            box-shadow: var(--shadow-sm);
+            border-left: 4px solid var(--cypa-blue);
+        }
+
+        .temario-item h3 {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+        }
+
+        .temario-item p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .modalidad-card {
+            background-color: var(--bg-color);
+            border-radius: var(--radius-md);
+            padding: 32px;
+            box-shadow: var(--shadow-md);
+            position: sticky;
+            top: 100px;
+        }
+
+        .info-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .info-icon {
+            color: var(--cypa-blue);
+            font-size: 1.5rem;
+            width: 32px;
+            text-align: center;
+        }
+
+        .info-text h4 {
+            margin-bottom: 4px;
+            font-size: 1.1rem;
+        }
+
+        .info-text p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .enroll-btn {
+            width: 100%;
+            margin-top: 16px;
+            font-size: 1.1rem;
+            padding: 16px;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .curso-grid {
+                grid-template-columns: 1fr;
+            }
+            .curso-hero-image {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <div class="logo-hexagon small">
+                    <span>&lt;CYPA&gt;</span>
+                </div>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html#proposito">Propósito</a>
+                <a href="index.html#cursos">Cursos</a>
+                <a href="index.html#contacto" class="btn btn-primary">Contacto</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Curso Header -->
+    <section class="curso-header">
+        <div class="container">
+            <div class="badge fade-in-up">Lógica, algoritmos y Estructuras de Datos</div>
+            <h1 class="fade-in-up delay-1">Curso <span class="highlight">Programación y Algoritmos</span></h1>
+            <p class="fade-in-up delay-2" style="font-size: 1.25rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto;">En este curso aprederemos la lógica y las metodologías de resolución de problemas en la informática. Estudiaresmos también los mecanismos que subyacen a la programación sin depender de un lenguaje específico; permitiendote abordar luego aquel que necesites o desees.</p>
+
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="curso-content">
+        <div class="container">
+            <!-- Imagen Hero -->
+            <!-- Cuando tengas tu imagen, reemplaza el div "placeholder-image" con tu etiqueta <img> -->
+            <!-- Ejemplo: <img src="media/curso-python.jpg" alt="Curso de Python" class="curso-hero-image fade-in-up delay-3"> -->
+            <div class="curso-hero-image fade-in-up delay-3">
+                <!-- <div class="placeholder-image">
+                    <i class="fab fa-python"></i>
+                    <span>Imagen representativa del curso (media/curso-python.jpg)</span>
+                </div> -->
+                <img src="media/curso-algoritmos.jpg" alt="Curso de Python" class="curso-hero-image fade-in-up delay-3">
+            </div>
+
+            <div class="curso-grid">
+                <!-- Temario -->
+                <div class="temario-section fade-in-up">
+                    <h2><i class="fas fa-list-ul"></i> Temario del Curso</h2>
+                    <ul class="temario-list">
+                        <li class="temario-item">
+                            <h3>Módulo 1: Introducción al Desarrollo Web</h3>
+                            <p></p>
+                        </li>
+                        <li class="temario-item">
+                            <h3>Módulo 1: Introducción a la Programación y la Lógica</h3>
+                            <p>Conceptos fundamentales de programación. Pensamiento lógico, resolución de problemas y cómo se construyen los algoritmos.</p>
+                        </li>
+                        <li class="temario-item">
+                            <h3>Módulo 2: Variables y Tipos de Datos</h3>
+                            <p>Manejo de datos en un programa. Variables, constantes, tipos de datos básicos y operaciones fundamentales.</p>
+                        </li>
+                        <li class="temario-item">
+                            <h3>Módulo 3: Estructuras de Control</h3>
+                            <p>Control del flujo de ejecución. Condicionales y estructuras repetitivas para resolver problemas de forma dinámica.</p>
+                        </li>                                                                        
+                        <li class="temario-item">
+                            <h3>Módulo 4: Funciones y Modularización</h3>
+                            <p>Organización del código mediante funciones. Parámetros, retorno de valores y reutilización de lógica.</p>
+                        </li>
+                        <li class="temario-item">
+                            <h3>Módulo 5: Introducción a Estructuras de Datos</h3>
+                            <p>Concepto y uso de estructuras como arrays y listas. Organización y manipulación de colecciones de datos.</p>
+                        </li>
+                        <li class="temario-item">
+                            <h3>Módulo 6: Estructuras de Datos Intermedias</h3>
+                            <p>Pilas, colas y estructuras más complejas. Casos de uso y ventajas según el tipo de problema.</p>
+                        </li>
+                        <li class="temario-item">
+                            <h3>Módulo 7: Algoritmos y Resolución de Problemas</h3>
+                            <p>Diseño de algoritmos eficientes. Estrategias básicas como búsqueda, ordenamiento y análisis general de soluciones.</p>
+                        </li>   
+                        <li class="temario-item">
+                            <h3>Módulo 8: Proyecto Integrador</h3>
+                            <p>Aplicación práctica de los conceptos aprendidos mediante la resolución de problemas o desarrollo de un pequeño sistema.</p>
+                        </li>                                                                                                              
+                    </ul>
+                </div>
+
+                <!-- Modalidad -->
+                <div class="modalidad-section fade-in-up delay-2">
+                    <div class="modalidad-card">
+                        <h2><i class="fas fa-info-circle"></i> Modalidad</h2>
+                        
+                        <div class="info-row">
+                            <i class="fas fa-video info-icon"></i>
+                            <div class="info-text">
+                                <h4>Formato de clases</h4>
+                                <p>Online Sincrónico (Clases en vivo vía Google Meet/Zoom).</p>
+                            </div>
+                        </div>
+
+                        <div class="info-row">
+                            <i class="fas fa-clock info-icon"></i>
+                            <div class="info-text">
+                                <h4>Duración y Horario</h4>
+                                <p>Duración total de 8 meses. Clases de 2 horas (Ej: Martes y Jueves 19:00 a 21:00 hs).</p>
+                            </div>
+                        </div>
+
+                        <div class="info-row">
+                            <i class="fas fa-laptop-code info-icon"></i>
+                            <div class="info-text">
+                                <h4>Plataformas / Recursos</h4>
+                                <p>Discord para comunidad y dudas, GitHub para proyectos, y plataforma propia para recursos de estudio.</p>
+                            </div>
+                        </div>
+
+                        <div class="info-row">
+                            <i class="fas fa-certificate info-icon"></i>
+                            <div class="info-text">
+                                <h4>Certificado</h4>
+                                <p>Certificado de finalización al entregar y aprobar el Proyecto Final.</p>
+                            </div>
+                        </div>
+
+                        <a href="#contacto" class="btn btn-primary enroll-btn">Inscribirme ahora <i class="fas fa-check-circle"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Start -->
+    <footer id="contacto" class="footer" style="margin-top: 0;">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo-hexagon small">
+                    <span>&lt;CYPA&gt;</span>
+                </div>
+                <p>Formando a la próxima generación de desarrolladores con pasión, código y lógica imbatible.</p>
+            </div>
+            
+            <div class="footer-socials">
+                <h4>Conecta con nosotros</h4>
+                <div class="social-links">
+                    <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Academia CyPA. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
